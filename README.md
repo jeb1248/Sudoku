@@ -1,2 +1,5 @@
-# Sudoku
- Sudoku in C++
+After playing a number of Sudoku games on-line, I noticed that most had a few functions like Load, Generate, Check, Solve, Save, etc. but very few were more robust.  
+HoDoKu seemed to be the best (http://hodoku.sourceforge.net/en/index.php).  It’s been around for a while so had time to mature.  The source code in Java is available for downloading.  
+The techniques section of the site contains an extensive list of solving methods and descriptions.  I was a little disappointed in the display, but it’s not built to be a Windows UI.  
+Ah, well…can’t have everything.  I thought I’d go through it to see how the various solving methods were implemented.  Alas, it’s been a long time since I coded in Java.  
+I’m currently using C# as I find it a natural outgrowth of ‘C’ which I had used extensively.  So why not just write my own version in C# ?  And that's what you'll find here.

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8445FDC-8130-42CE-977A-BA643DCF4720}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YAS</RootNamespace>
+    <AssemblyName>YAS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Annotations.cs" />
+    <Compile Include="ProgramClasses\PuzzleGenerator.cs" />
+    <Compile Include="Core1\Cell.cs" />
+    <Compile Include="ProgramClasses\HiddenSingles.cs" />
+    <Compile Include="Core1\Puzzle.cs" />
+    <Compile Include="Core1\Region.cs" />
+    <Compile Include="Core1\Solver.cs" />
+    <Compile Include="ProgramClasses\Solvers.cs" />
+    <Compile Include="Core1\SPoint.cs" />
+    <Compile Include="Core1\Utils.cs" />
+    <Compile Include="ProgramClasses\Utilities.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="YAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YAS.Designer.cs">
+      <DependentUpon>YAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCandidate.Designer.cs">
+      <DependentUpon>frmSelectCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramClasses\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="YAS.resx">
+      <DependentUpon>YAS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCandidate.resx">
+      <DependentUpon>frmSelectCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\gem8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gem8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\grid1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\chkmark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\HorizontalStripes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\qmark.jpg" />
+    <None Include="Images\qmark3.jpg" />
+    <None Include="Images\ballerina3.jpg" />
+    <None Include="Images\book1.jpg" />
+    <Content Include="Images\hammer2.jpg" />
+    <None Include="Images\HiddenSingle.jpg" />
+    <Content Include="Images\icon2.ico" />
+    <None Include="Images\NakedSingle.jpg" />
+    <None Include="Resources\NakedSingle.jpg" />
+    <None Include="Resources\hammer2.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
